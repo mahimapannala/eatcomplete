@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+  </head>
+
+  <body>
+    <div id = "home">
+      <div class="text-center mb-4">
+        <h1 class="h1 mb-3 font-weight-normal" style="margin-top: 100px">Welcome to Eat Complete</h1>
+      </div>
+    <form class="form-signin">
+      <p align="center" class="h5 mb-3 font-weight-normal">Enter a category of restaurants (<a href="categories.html">list of valid categories</a>) or leave blank to search for all restaurants</p>
+
+      <div class="form-label-group">
+        <input type="text" id="inputCat" style="margin-bottom: 15px" class="form-control" placeholder="Category of Restaurants" required autofocus>
+        <p align="center" class="h5 mb-3 font-weight-normal">Next, enter a city or zip code or use current location to begin your search</p>
+        <input type="text" id="inputCity" class="form-control" placeholder="City or Zip Code" required autofocus>
+      </div>
+
+      <button class="btn btn-lg btn-primary btn-block" type="button" onclick="changeCity()">Select Location</button>
+
+      <button class="btn btn-lg btn-primary btn-block" type="button" onclick="changeCurr()" style="margin-top: 50px">Use Current Location</button>
+    </form>
+    </div>
+    <div id = "new" style="display:none;">
+      <h1 class="h1 mb-3 font-weight-normal" style="margin-bottom: 5px"><center>Eat Complete</center></h1>
+      <h1 class="h4 mb-3 font-weight-normal" style="margin-bottom: 0px"><center>Click find restaurants to begin your search or load more results</center></h1>
+      <h1 class="h4 mb-3 font-weight-normal" style="margin-bottom: 0px"><center>Restart search to use a different location or category</center></h1>
+      <div class="row">
+        <div class="col-md-6">
+          <table id="table">
+            <tr>
+              <th>Business</th>
+              <th>Address</th>
+              <th>Rating</th>
+              <th>Price</th>
+              <th>Phone #</th>
+            </tr>
+          </table>
+        </div>
+        <div class="col-md-6">
+          <div id="map"></div>
+
+          <p hidden id="lat">empty</p>
+          <p hidden id="long">empty</p>
+
+          <button type="button" class="btn btn-lg btn-primary btn-block" onClick="performSearch()">Find Restaurants</button>
+          <button type="button" class="btn btn-lg btn-primary btn-block" onClick="restart()">Restart Search</button>
+
+        </div>
+        <p id="load" style="margin-left: 20px"></p>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/search.js"></script>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAe3uPI8a0KI_ZXU1a1qjHp444cGW_A2-8&callback=initMap">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"></script>
+  </body>
+</html>
