@@ -1,5 +1,5 @@
 # Eat Complete
-My solution is a website that allows users to choose a restaurant to eat at. 
+This is a website that allows users to choose a restaurant to eat at. 
 
 It begins on home page where the user can either enter a location to search from or use their current location. They can also choose to enter a category of restaurants, where a list of available restaurants is linked, or search for all restaurants, by leaving the field blank. 
 
