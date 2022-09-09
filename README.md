@@ -7,4 +7,4 @@ After these initial choices, the user is taken to a screen where they can click 
 
 I used Yelp's API to search for businesses based on some search criteria, including latitude, longitude, limit, and categories. I also used the Google Maps Javascript API to display a map with the different businesses represented by markers. I used the Google Geocoding API to convert cities and zip codes to latitude and longitude coordinates.
 
-Link to website (copy and paste the link): https://mahimapannala.github.io/eatcomplete/​
+Link to website (copy and paste the link): mahimapannala.github.io/eatcomplete/
